@@ -117,7 +117,6 @@ class VGG(nn.Module):
         """
         n, c_nl, h, w = f_phi.size()
         c_nl = f_phi.size(1)
-        f_phi = F.interpolate(f_phi, size=(h,w),mode='bilinear', align_corners=True)
         f_phi = f_phi.permute(0, 2, 3, 1).contiguous().view(n, -1, c_nl)
         f_phi_normed = f_phi/(torch.norm(f_phi, dim=2, keepdim=True)+1e-10)
 
@@ -125,15 +124,20 @@ class VGG(nn.Module):
         non_local_cos = F.relu(torch.matmul(f_phi_normed, f_phi_normed.transpose(1,2)))
         non_local_cos[non_local_cos<fo_th] = 0
         non_local_cos_fo = non_local_cos.clone()
+        non_local_cos_fo = non_local_cos_fo / (torch.sum(non_local_cos_fo, dim=1, keepdim=True) + 1e-5)
 
         # high order
+        base_th = 1./(h*w)
         non_local_cos[:, torch.arange(h * w), torch.arange(w * h)] = 0
+        non_local_cos = non_local_cos/(torch.sum(non_local_cos,dim=1, keepdim=True) + 1e-5)
         non_local_cos_ho = non_local_cos.clone()
+        so_th = base_th * so_th
         for _ in range(order-1):
-            non_local_cos_ho[:, torch.arange(h * w), torch.arange(w * h)] = 0
             non_local_cos_ho = torch.matmul(non_local_cos_ho, non_local_cos)
-        non_local_cos_ho = non_local_cos_ho - torch.min(non_local_cos_ho, dim=1, keepdim=True)[0]
-        non_local_cos_ho = non_local_cos_ho / (torch.max(non_local_cos_ho, dim=1, keepdim=True)[0] + 1e-10)
+            # non_local_cos_ho[:, torch.arange(h * w), torch.arange(w * h)] = 0
+            non_local_cos_ho = non_local_cos_ho / (torch.sum(non_local_cos_ho, dim=1, keepdim=True) + 1e-10)
+        # non_local_cos_ho = non_local_cos_ho - torch.min(non_local_cos_ho, dim=1, keepdim=True)[0]
+        #non_local_cos_ho = non_local_cos_ho / (torch.max(non_local_cos_ho, dim=1, keepdim=True)[0] + 1e-10)
         non_local_cos_ho[non_local_cos_ho < so_th] = 0
         return  non_local_cos_fo, non_local_cos_ho
 
