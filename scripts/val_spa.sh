@@ -7,6 +7,8 @@ python val_spa.py \
     --gpus=0 \
     --dataset=cub \
     --img_dir=../data/CUB_200_2011/images \
+    --test_list=../data/CUB_200_2011/list/test.txt \
+    --test_box=../data/CUB_200_2011/list/test_boxes.txt \
     --num_classes=200 \
     --snapshot_dir=../snapshots/vgg_16_baseline \
     --onehot=False \
