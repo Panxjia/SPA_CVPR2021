@@ -10,7 +10,7 @@ The official implementaion of SPA_CVPR2021 paper "[Unveiling the Potential of St
    cd $SPA_ROOT
    ~~~
 2. Create an Anaconda enrironment with python>=3.6 and Pytorch=1.1.0
-3.Download the images of ILSVRC2012 dataset and place them at $SPA_ROOT/data/
+3. Download the images of ILSVRC2012 dataset and place them at $SPA_ROOT/data/
 
 ## Train and test
 -Train
