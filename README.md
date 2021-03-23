@@ -3,13 +3,15 @@
 The official implementaion of SPA_CVPR2021 paper "[Unveiling the Potential of Structure-preserving for Weakly Supervised Object Localization](https://arxiv.org/abs/2103.04523)"
 
 ## Setup
-1. Clone this repo:
+1. Create an Anaconda enrironment with python>=3.6 and Pytorch=1.1.0
+2. Clone this repo:
    ~~~
    SPA_ROOT=/path/to/SPA
    git clone https://github.com/Panxjia/SPA_CVPR2021.git $SPA_ROOT
    cd $SPA_ROOT
+   pip install -r requirements.txt
+   pip install torch==1.1.0 torchvision==0.2.1
    ~~~
-2. Create an Anaconda enrironment with python>=3.6 and Pytorch=1.1.0
 3. Prepare the ILSVRC2012 dataset
    1. Download training and validation datasets, and put them at $SPA_ROOT/data/ILSVRC
    2. Download [namelist](https://drive.google.com/drive/folders/1MRay8zKYHQmYiPEEdRCaYmGAaSudgSMY?usp=sharing) and put it at $SPA_ROOT/data/ILSVRC  
