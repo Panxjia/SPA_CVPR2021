@@ -13,12 +13,12 @@ The official implementaion of SPA_CVPR2021 paper "[Unveiling the Potential of St
 3. Download the images of ILSVRC2012 dataset and place them at $SPA_ROOT/data/
 
 ## Train and test
--Train
+- Train
     ~~~
     cd scripts
     bash train_spa_ilsvrc.sh
     ~~~
--Test
+- Test
   
   Download the pretrained model at GoogleDrive(https://drive.google.com/file/d/1Zs0uKmzkPz-zSanqAlxTUTZyENVE-RBl/view?usp=sharing)
     ~~~
