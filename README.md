@@ -3,7 +3,7 @@
 The official implementaion of SPA_CVPR2021 paper "[Unveiling the Potential of Structure-preserving for Weakly Supervised Object Localization](https://arxiv.org/abs/2103.04523)"
 
 ## Setup
-1. Create an Anaconda enrironment with python>=3.6 and Pytorch=1.1.0
+1. Create an Anaconda enrironment with python>=3.6
 2. Clone this repo:
    ~~~
    SPA_ROOT=/path/to/SPA
