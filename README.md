@@ -10,7 +10,16 @@ The official implementaion of SPA_CVPR2021 paper "[Unveiling the Potential of St
    cd $SPA_ROOT
    ~~~
 2. Create an Anaconda enrironment with python>=3.6 and Pytorch=1.1.0
-3. Download the images of ILSVRC2012 dataset and place them at $SPA_ROOT/data/
+3. Prepare the ILSVRC2012 dataset
+   1. Download training and validation dataset and put them at $SPA_ROOT/data/ILSVRC
+   2. Download [namelist](https://drive.google.com/drive/folders/1MRay8zKYHQmYiPEEdRCaYmGAaSudgSMY?usp=sharing) and put it at $SPA_ROOT/data/ILSVRC
+   The dataset is organised as:
+   ~~~
+      ILSVRC-
+           -- Train
+           -- val
+           -- list
+   ~~~
 4. Download the pretrained models [VGG16](https://drive.google.com/file/d/1OC8apFl2YphcCQ_4TkLNn92NxyNSqWT8/view?usp=sharing) and [Inception V3](https://drive.google.com/file/d/1saaTAMh1O8uE3AL34h1wnH9mR8XFJky0/view?usp=sharing), and place them at $SPA_ROOT/pretrained_models/
 
 ## Train and test
