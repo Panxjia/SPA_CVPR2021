@@ -6,7 +6,7 @@ The official implementaion of SPA_CVPR2021 paper "[Unveiling the Potential of St
 1. Clone this repo:
    ~~~
    SPA_ROOT=/path/to/SPA
-   git clone $SPA_ROOT
+   git clone https://github.com/Panxjia/SPA_CVPR2021.git $SPA_ROOT
    cd $SPA_ROOT
    ~~~
 2. Create an Anaconda enrironment with python>=3.6 and Pytorch=1.1.0
