@@ -21,11 +21,26 @@ The official implementaion of SPA_CVPR2021 paper "[Unveiling the Potential of St
     ~~~
 - Test
   
-  Download the our models [Vgg16](https://drive.google.com/file/d/1Zs0uKmzkPz-zSanqAlxTUTZyENVE-RBl/view?usp=sharing), [Vgg16_RAM]()
+  Download the our models [Vgg16](https://drive.google.com/file/d/1Zs0uKmzkPz-zSanqAlxTUTZyENVE-RBl/view?usp=sharing) and place it at $SPA_ROOT/snapshots/vgg_16_baseline_ilsvrc_20e_10_15d
     ~~~
     cd scripts
     bash val_spa_ilsvrc.sh
     ~~~
 
+## Citation
 
+If you find this project useful for your research, please use the following BibTeX entry.
+```
+@article{pan2021unveiling,
+  title={Unveiling the Potential of Structure Preserving for Weakly Supervised Object Localization},
+  author={Xingjia Pan and Yingguo Gao and Zhiwen Lin and Fan Tang and Weiming Dong and Haolei Yuan and Feiyue Huang and Changsheng Xu},
+  booktitle={CVPR},
+  pages={1--8},
+  year={2021}
+}
+```
+## Contacts
+If you have any questions about our work, please do not hesitate to contact us by emails.  
+Xingjia Pan: xjia.pan@gmail.com
+Fan Tang: tfan.108@gmail.com
 
