@@ -21,7 +21,7 @@ The official implementaion of SPA_CVPR2021 paper "[Unveiling the Potential of St
     ~~~
 - Test
   
-  Download the our model at GoogleDrive(https://drive.google.com/file/d/1Zs0uKmzkPz-zSanqAlxTUTZyENVE-RBl/view?usp=sharing)
+  Download the our models [Vgg16](https://drive.google.com/file/d/1Zs0uKmzkPz-zSanqAlxTUTZyENVE-RBl/view?usp=sharing), [Vgg16_RAM]()
     ~~~
     cd scripts
     bash val_spa_ilsvrc.sh
