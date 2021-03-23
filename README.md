@@ -11,6 +11,7 @@ The official implementaion of SPA_CVPR2021 paper "[Unveiling the Potential of St
    ~~~
 2. Create an Anaconda enrironment with python>=3.6 and Pytorch=1.1.0
 3. Download the images of ILSVRC2012 dataset and place them at $SPA_ROOT/data/
+4. Download the pretrained models [vgg16](https://drive.google.com/file/d/1OC8apFl2YphcCQ_4TkLNn92NxyNSqWT8/view?usp=sharing) and [inceptionV3](https://drive.google.com/file/d/1saaTAMh1O8uE3AL34h1wnH9mR8XFJky0/view?usp=sharing), and place them at $SPA_ROOT/pretrained_models/
 
 ## Train and test
 - Train
@@ -20,7 +21,7 @@ The official implementaion of SPA_CVPR2021 paper "[Unveiling the Potential of St
     ~~~
 - Test
   
-  Download the pretrained model at GoogleDrive(https://drive.google.com/file/d/1Zs0uKmzkPz-zSanqAlxTUTZyENVE-RBl/view?usp=sharing)
+  Download the our model at GoogleDrive(https://drive.google.com/file/d/1Zs0uKmzkPz-zSanqAlxTUTZyENVE-RBl/view?usp=sharing)
     ~~~
     cd scripts
     bash val_spa_ilsvrc.sh
