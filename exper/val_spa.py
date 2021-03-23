@@ -323,20 +323,20 @@ def val(args):
                                         gt_label=label.data.long().numpy(),gt_box=gt_boxes[idx],
                                         epoch=args.current_epoch, threshold=th, suffix='scg')
 
-                    # save_im_sim(img_path[0], aff_maps_fo, debug_dir, gt_label=label.data.long().numpy(),
-                    #             epoch=args.current_epoch, suffix='fo')
-                    # save_im_sim(img_path[0], aff_maps_so, debug_dir, gt_label=label.data.long().numpy(),
-                    #             epoch=args.current_epoch, suffix='so')
-                    # save_im_sim(img_path[0], aff_maps_fo[-2]+aff_maps_fo[-1], debug_dir, gt_label=label.data.long().numpy(),
-                    #             epoch=args.current_epoch, suffix='fo_45')
+                    save_im_sim(img_path[0], sc_maps_fo, debug_dir, gt_label=label.data.long().numpy(),
+                                epoch=args.current_epoch, suffix='fo')
+                    save_im_sim(img_path[0], sc_maps_so, debug_dir, gt_label=label.data.long().numpy(),
+                                epoch=args.current_epoch, suffix='so')
+                    save_im_sim(img_path[0], sc_maps_fo[-2]+sc_maps_fo[-1], debug_dir, gt_label=label.data.long().numpy(),
+                                epoch=args.current_epoch, suffix='fo_45')
                     # save_im_sim(img_path[0], aff_maps_so[-2] + aff_maps_so[-1], debug_dir,
                     #             gt_label=label.data.long().numpy(),
                     #             epoch=args.current_epoch, suffix='so_45')
                     # # save_im_sim(img_path[0], aff_maps, debug_dir, gt_label=label.data.long().numpy(),
                     # #             epoch=args.current_epoch, suffix='com')
-                    # save_sim_heatmap_box(img_path[0], top_maps,  debug_dir, gt_label=label.data.long().numpy(),
-                    #                      sim_map=aff_maps_fo[-2] + aff_maps_fo[-1], epoch=args.current_epoch, threshold=th,
-                    #                      suffix='aff_fo_f45_cam', fg_th=args.scg_fg_th, bg_th=args.scg_bg_th)
+                    save_sim_heatmap_box(img_path[0], top_maps,  debug_dir, gt_label=label.data.long().numpy(),
+                                         sim_map=sc_maps_fo[-2] + sc_maps_fo[-1], epoch=args.current_epoch, threshold=th,
+                                         suffix='aff_fo_f45_cam', fg_th=args.scg_fg_th, bg_th=args.scg_bg_th)
                     # save_sim_heatmap_box(img_path[0], top_maps, debug_dir, gt_label=label.data.long().numpy(),
                     #                      sim_map=aff_maps_so[-2] + aff_maps_so[-1], epoch=args.current_epoch, threshold=th,
                     #                      suffix='aff_so_f5_cam', fg_th=args.scg_fg_th, bg_th=args.scg_bg_th)
